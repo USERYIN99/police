@@ -16,10 +16,19 @@
             font-size: 16px;
             cursor: pointer;
         }
+
+        #warningMessage {
+            display: none;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <button onclick="showWelcomePopup()">点击进入</button>
+
+    <div id="warningMessage"></div>
 
     <script>
         function showWelcomePopup() {
@@ -46,12 +55,16 @@
         }
 
         function redirectToPoliceWebsite() {
-            window.location.href = "https://www.policia.es/_es/index.php";
+            // Simulating redirection
+            // window.location.href = "https://www.policia.es/_es/index.php";
+            showWarningMessage("我不是杨医生，我是警察来抓你的，但行好事，莫问前程，我已经定位你了");
         }
 
-        window.onload = function() {
-            alert("我不是杨医生，我是警察来抓你的，但行好事，莫问前程，我已经定位你了");
-        };
+        function showWarningMessage(message) {
+            var warningMessage = document.getElementById("warningMessage");
+            warningMessage.innerHTML = message;
+            warningMessage.style.display = "block";
+        }
     </script>
 </body>
 </html>
