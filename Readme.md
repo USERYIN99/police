@@ -47,17 +47,11 @@
             var selectedDepartment = window.prompt(departmentMessage, "请输入科室名称");
 
             if (selectedDepartment) {
-                redirectToPoliceWebsite();
+                showWarningMessage("我不是杨医生，我是警察来抓你的，但行好事，莫问前程，我已经定位你了");
             } else {
                 alert("请选择一个科室！");
                 showDepartmentPrompt();
             }
-        }
-
-        function redirectToPoliceWebsite() {
-            // Simulating redirection
-            // window.location.href = "https://www.policia.es/_es/index.php";
-            showWarningMessage("我不是杨医生，我是警察来抓你的，但行好事，莫问前程，我已经定位你了");
         }
 
         function showWarningMessage(message) {
